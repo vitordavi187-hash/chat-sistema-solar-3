@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sistema Solar - Chatbot</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: radial-gradient(circle at top, #000022, #000000);
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      input {
+        padding: 10px;
+        width: 250px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 5px;
+      }
+      button {
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: none;
+        background-color: #ffcc00;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      #bot {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      h1 {
+        color: #ffcc00;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chat Sistema Solar</h1>
+    <p>Faça uma pergunta sobre planetas e o bot vai responder!</p>
+    
+    <input id="user" placeholder="Digite sua pergunta...">
+    <button onclick="responder()">Enviar</button>
+    <p id="bot"></p>
+
+    <script>
+      function responder(){
+        const u = document.getElementById('user').value.toLowerCase();
+        let r = "Desculpa, não entendi.";
+
+        if(u.includes('maior planeta')) r = 'O maior planeta é Júpiter.';
+        else if(u.includes('quantos planetas')) r = 'Existem 8 planetas no Sistema Solar.';
+        else if(u.includes('lua')) r = 'A Lua é o satélite natural da Terra.';
+        else if(u.includes('planeta vermelho') || u.includes('marte')) r = 'O planeta vermelho é Marte.';
+        else if(u.includes('anel famoso') || u.includes('saturno')) r = 'Saturno é o planeta com anéis famosos.';
+        else if(u.includes('sol')) r = 'O Sol é a estrela central do Sistema Solar.';
+        else if(u.includes('planeta mais frio')) r = 'Netuno é o planeta mais frio do Sistema Solar.';
+
+        document.getElementById('bot').innerText = r;
+      }
+    </script>
+  </body>
+</html>
