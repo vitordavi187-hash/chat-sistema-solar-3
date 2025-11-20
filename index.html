@@ -38,7 +38,7 @@
   <h1>Chat Sistema Solar</h1>
   <p>Clique em um planeta ou faça uma pergunta!</p>
 
-  <!-- Botões dos planetas -->
+  <!-- Botões -->
   <button class="botao-planeta" onclick="respostaPlaneta('mercurio')">Mercúrio</button>
   <button class="botao-planeta" onclick="respostaPlaneta('venus')">Vênus</button>
   <button class="botao-planeta" onclick="respostaPlaneta('terra')">Terra</button>
@@ -60,51 +60,7 @@
       let resposta = '';
       let img = '';
       switch(planeta){
-        case 'mercurio':
-          resposta = 'Mercúrio é o planeta mais próximo do Sol e muito quente durante o dia.';
-          img = 'https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg';
-          break;
-        case 'venus':
-          resposta = 'Vênus tem uma atmosfera muito densa e é o planeta mais quente.';
-          img = 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg';
-          break;
-        case 'terra':
-          resposta = 'A Terra é o nosso planeta e o único com vida conhecida.';
-          img = 'https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg';
-          break;
-        case 'marte':
-          resposta = 'Marte é conhecido como o planeta vermelho.';
-          img = 'https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg';
-          break;
-        case 'jupiter':
-          resposta = 'Júpiter é o maior planeta do Sistema Solar e tem a Grande Mancha Vermelha.';
-          img = 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg';
-          break;
-        case 'saturno':
-          resposta = 'Saturno é famoso pelos seus enormes anéis.';
-          img = 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg';
-          break;
-        case 'urano':
-          resposta = 'Urano gira de lado e é azul-esverdeado por causa do metano.';
-          img = 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg';
-          break;
-        case 'netuno':
-          resposta = 'Netuno é o planeta mais distante do Sol e muito frio.';
-          img = 'https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg';
-          break;
-      }
-      document.getElementById('bot').innerHTML = resposta + (img ? '<br><img src="'+img+'">' : '');
-    }
+        case 'mercurio': resposta='Mercúrio é o planeta mais próximo do Sol e muito quente.'; img='https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg'; break;
+        case 'venus': resposta='Vênus é o planeta mais quente do Sistema Solar.'; img='https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg'; break;
+        case 'terra': resposta='A Terra é o nosso pla
 
-    function responder(){
-      const u = document.getElementById('user').value.toLowerCase();
-      let r = "Desculpa, não entendi. Clique em um planeta ou pergunte sobre Sol/Lua.";
-      let img = '';
-
-      if(u.includes('sol')) { 
-        r = 'O Sol é a estrela central do Sistema Solar e fornece luz e calor.'; 
-        img='https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys.jpg'; 
-      }
-      else if(u.includes('lua')) { 
-        r = 'A Lua é o satélite natural da Terra.'; 
-        i
